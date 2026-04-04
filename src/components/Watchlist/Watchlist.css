@@ -1,0 +1,73 @@
+.watchlist__container a {
+  align-self: flex-start;
+  margin: 24px auto;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.watchlist__form {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  gap: 36px; 
+  margin-top: 16px;
+}
+
+.watchlist__link {
+  display: flex;
+  color: royalblue;
+  align-items: center;
+  text-align: none;
+  gap: 8px;
+}
+
+.watchlist__selected--top {
+  color: royalblue;
+}
+
+.watchlist__header {
+  font-size: 48px;
+  margin: 24px 0;
+  color: fuchsia;
+}
+
+input {
+  display: flex;
+  align-self: center;
+  height: 48px;
+  width: 75%;
+  font-size: 20px;
+}
+
+.watchlist__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 500px;
+}
+
+.watchlist__button {
+  width: 50%;
+  align-self: center;
+  height: 48px;
+  border-radius: 12px;
+  background-color: royalblue;
+  color: white;
+  font-size: 24px;
+  border: none;
+  margin: 24px 0;
+}
+
+/*SMALL PHONES, TABLETS, LARGE SMARTPHONES */
+@media (max-width: 768px) {
+
+.watchlist__header {
+  text-align: center;
+  font-size: 48px;
+}
+
+input {
+  width: 100%;
+}
+}

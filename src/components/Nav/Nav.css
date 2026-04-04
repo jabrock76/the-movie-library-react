@@ -1,0 +1,209 @@
+/*
+
+Navigation
+
+*/
+
+nav {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height:90%;
+    object-fit: cover;
+    z-index: 1;
+    opacity: 0.3;
+}
+
+.nav__row {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nav__logo {
+    display: flex;
+    align-items: center;
+    z-index: 3;
+}
+
+.nav__logo--img {
+    height: 150px;
+    width: 150px;
+}
+
+.nav__links {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+    margin-left: auto;
+    align-items: center;
+    z-index: 3;
+}
+
+.nav__link {
+    font-size: 16px;
+    font-weight: 650;
+    text-decoration: none;
+    color: royalblue;
+    position: relative;
+    display: inline-block;
+    width: auto;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 8px 16px;
+    border-radius: 8px;
+}
+
+.nav__link:hover {
+    text-decoration: underline;
+    text-decoration-color: fuchsia;
+    text-decoration-thickness: 2px;
+    background-color: white;
+}
+
+.nav__link--primary {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    background-color: royalblue;
+    color: white;
+    padding: 8px 32px;
+    border-radius: 32px;
+    transition: all 300ms ease;
+}
+
+.nav__link--primary:hover {
+    background-color: white;
+    color: royalblue;
+    border: 2px solid royalblue;
+}
+
+.nav__link--primary:hover::after {
+    display: none;
+}
+
+.btn--line {
+    height: 3px;
+    width: 25px;
+    background-color: royalblue;
+    margin: 5px 0;
+}
+
+/* Mobile menu button - hidden by default */
+.mobile__menu--btn {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 32px;
+  color: royalblue;
+  cursor: pointer;
+  z-index: 1001;
+  padding: 10px;
+  position: relative;
+}
+
+/*SMALL PHONES, TABLETS, LARGE SMARTPHONES */
+@media (max-width: 768px) {
+
+  /* 
+    This is the key fix: 
+    Reduce the height of the main nav container on mobile.
+    'auto' lets the content inside determine the height.
+  */
+  nav {
+    min-height: auto;
+  }
+
+  .nav__logo--img {
+    width: 90px;
+    height: 90px;
+  }
+
+  /* 
+    Corrected the typo from .nav__backgroud to .nav__background
+    and set height to 100% to fill its (now smaller) container.
+  */
+  .nav__background {
+    height: 100%;
+  }
+
+  .nav__row {
+    justify-content: space-between;
+    padding: 20px;
+    position: relative;
+    z-index: 1001;
+  }
+
+  /* Show the hamburger button */
+  .mobile__menu--btn {
+    display: block;
+    z-index: 1001;
+    position: relative;
+  }
+
+  /* Hide nav links by default on mobile */
+  .nav__links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    bottom: 0;
+    left: auto;
+    height: 100vh;
+    width: 250px;
+    max-width: 250px;
+    background-color: rgba(10, 31, 68, 0.95);
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 80px 0 0 0;
+    margin: 0;
+    transition: right 0.3s ease;
+    z-index: 1000;
+    gap: 0;
+  }
+
+  /* Show nav links when menu is open */
+  .nav__links--open {
+    right: 0;
+  }
+
+  /* Style the links in mobile menu */
+  .nav__list {
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin: 0;
+    list-style: none;
+  }
+
+  .nav__link {
+    font-size: 18px;
+    display: block;
+    width: 100%;
+    color: white;
+    background-color: transparent;
+  }
+
+  .nav__link:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .nav__link--primary {
+    background-color: royalblue;
+    color: white;
+  }
+}
