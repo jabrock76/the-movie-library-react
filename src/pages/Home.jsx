@@ -53,7 +53,7 @@ const Home = () => {
           <div className="board">
             <div className="line">SCENE: 1</div>
             <div className="line">TAKE: 4</div>
-            <div className="line">DIRECTOR: YOU</div>
+            <div className="line">DIRECTOR: You</div>
             <div className="line">DATE: {currentDate} </div>
             <div className="line__primary"><u><b>The Movie Library</b></u></div>
           </div>
