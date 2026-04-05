@@ -83,6 +83,7 @@ nav {
     padding: 8px 32px;
     border-radius: 32px;
     transition: all 300ms ease;
+    border: none;
 }
 
 .nav__link--primary:hover {
@@ -102,6 +103,20 @@ nav {
     margin: 5px 0;
 }
 
+.nav__logout--btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+.nav__logout--btn:hover {
+  text-decoration: underline;
+}
+
 /* Mobile menu button - hidden by default */
 .mobile__menu--btn {
   display: none;
@@ -116,7 +131,7 @@ nav {
 }
 
 /*SMALL PHONES, TABLETS, LARGE SMARTPHONES */
-@media (max-width: 768px) {
+@media (max-width: 1050px) {
 
   /* 
     This is the key fix: 

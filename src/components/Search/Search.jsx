@@ -67,7 +67,7 @@ const Search = ({
   return (
     <div className="container">
       <div className="input__wrapper">
-        <input
+        <input className="input__search"
           type="text"
           value={localTerm}
           onChange={(e) => setLocalTerm(e.target.value)}

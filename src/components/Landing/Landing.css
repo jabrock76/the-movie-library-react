@@ -57,3 +57,28 @@ Landing
     color: #666;
     font-size: 16px;
 }
+
+/*LARGE SMARTPHONES, TABLETS */
+@media (max-width: 1050px) {
+
+.landing__img {
+    height: 60%;
+    width: 80%;
+}
+
+}
+
+/*SMALL PHONES, TABLETS, LARGE SMARTPHONES */
+@media (max-width: 768px) {
+
+.landing__img {
+    height: 50%;
+    width: 65%;
+    margin-top: 32px;
+}
+
+#movieResults.results-grid {
+    margin: 0;
+    padding: 0;
+}
+}

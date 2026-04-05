@@ -1,11 +1,11 @@
-.subscribe__container a {
+.login__container a {
   align-self: flex-start;
-  margin: 24px auto;
+  margin: 48px auto;
   width: 100%;
   max-width: 1200px;
 }
 
-.subscribe__form {
+.login__form {
   display: flex;
   flex-direction: column;
   width: 50%;
@@ -13,7 +13,7 @@
   margin-top: 16px;
 }
 
-.subscribe__link {
+.login__link {
   display: flex;
   color: royalblue;
   align-items: center;
@@ -21,11 +21,11 @@
   gap: 8px;
 }
 
-.subscribe__selected--top {
+.login__selected--top {
   color: royalblue;
 }
 
-.subscribe__header {
+.login__header {
   font-size: 48px;
   margin-bottom: 24px;
   color: fuchsia;
@@ -37,9 +37,10 @@ input {
   height: 48px;
   width: 75%;
   font-size: 20px;
+  
 }
 
-.subscribe__container {
+.login__container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -47,7 +48,7 @@ input {
   height: 500px;
 }
 
-.subscribe__button {
+.login__button {
   width: 50%;
   align-self: center;
   height: 48px;
@@ -58,22 +59,26 @@ input {
   border: none;
 }
 
-.subscribe__button:hover {
+.login__button:hover {
   background-color: white;
   color: royalblue;
   border: 2px solid #ccc;
   text-decoration: underline fuchsia;
 }
 
+.login__signup {
+  font-size: 18px;
+}
+
 /*SMALL PHONES, TABLETS, LARGE SMARTPHONES */
 @media (max-width: 768px) {
 
-.subscribe__header {
+.login__header {
   text-align: center;
   margin: 10px 0;
 }
 
-.subscribe__form {
+.login__form {
   margin-top: 36px;
   gap: 36px;
   width: 80%;
@@ -83,11 +88,11 @@ input {
   width: 100%;
 }
 
-.subscribe__header .royal {
+.login__header .royal {
   white-space: nowrap;
 }
 
-.subscribe__button {
+.login__button {
   width: 75%;
 }
 }

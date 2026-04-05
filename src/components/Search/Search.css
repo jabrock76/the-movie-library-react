@@ -37,9 +37,10 @@ SEARCHED
 }
 
 .input__wrapper .btn:hover {
-    background-color: lightgray;
+    background-color: white;
     color: royalblue;
     border: 2px solid #ccc;
+    text-decoration: underline fuchsia;
 }
 
 .btn {
@@ -250,30 +251,42 @@ SEARCHED
 /*SMALL PHONES, TABLETS, LARGE SMARTPHONES */
 @media (max-width: 768px) {
 
-.input__wrapper {
-    flex-direction: column;
-    gap: 16px;
-    padding: 0;
-    margin: 16px 16px;
-}
+    .input__wrapper {
+        flex-direction: column;
+        gap: 16px;
+        padding: 0;
+        margin: 32px 16px;
+    }
 
-.input__wrapper input {
-    width: 75%;
-    height: 150px;
-    min-width: unset;
-    max-width: unset;
-    font-size: 18px;
-}
+    .input__wrapper input {
+        box-sizing: border-box;
+        width: 75%;
+        min-width: unset;
+        max-width: unset;
+        font-size: 18px;
+        height: 50px; 
+        padding-left: 16px;
+        padding-right: 16px;
+        flex: none;
+    }
 
-.input__wrapper .btn {
-    width: 75%;
-    padding: 12px 24px;
-    font-size: 18px;
-    height: 50px;
-    margin-top: 24px;
-}
+    .input__wrapper .btn {
+        width: 75%;
+        padding: 12px 24px;
+        font-size: 18px;
+        height: 50px; 
+        margin-top: 24px;
+    }
 
-.row__header {
-    margin: 48px 0;
-}
+    .row__header {
+        margin: 48px 0;
+    }
+
+    .filter__row {
+        font-size: 12px;
+    }
+
+    .searched__results {
+        font-size: 18px;
+    }
 }

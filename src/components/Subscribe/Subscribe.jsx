@@ -1,15 +1,21 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './Subscribe.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Subscribe = () => {
-  const [error, setError] = useState('');
+  const [subscription, setSubscription] = useState([]);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     password: ''
   });
+  const navigate = useNavigate();
+
+  useEffect (() => {
+    const storedSubscription = JSON.parse(localStorage.getItem('mySubscription')) || [];
+    setSubscription(storedSubscription);
+  }, []);
 
   const handleChange = (e) => {
     setFormData({
@@ -20,9 +26,28 @@ const Subscribe = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    const newSubscription = {
+      name: formData.name,
+      email: formData.email,
+      password: formData.password,
+      subscribedAt: new Date().toISOString()
+    };
+
+    const updatedSubscriptions = [...subscription, newSubscription];
+
+    localStorage.setItem('mySubscription', JSON.stringify(updatedSubscriptions));
+    setSubscription(updatedSubscriptions);
+
+    localStorage.setItem('isLoggedIn', 'true');
+    localStorage.setItem('isSubscribed', 'true');
+    localStorage.setItem('currentUser', JSON.stringify(newSubscription));
+
     alert(`Thank you for subscribing, ${formData.name}! A confirmation has been sent to ${formData.email}`);
-    // Reset form
+  
     setFormData({ name: '', email: '', password: ''});
+
+    navigate('/');
   };
 
   return (

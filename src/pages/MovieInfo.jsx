@@ -30,6 +30,25 @@ const MovieInfo = () => {
     if (id) getMovieDetails();
   }, [id]);
 
+  const handleAddToWatchlist = () => {
+    if (!movie) {
+        return;
+    }
+    const watchlist = JSON.parse(localStorage.getItem('myWatchlist')) || [];
+
+    const isAlreadyAdded = watchlist.some(item => item.id === movie.imdbID);
+
+    if (!isAlreadyAdded) {
+        watchlist.push({ id: movie.imdbID, title: movie.Title });
+
+        localStorage.setItem('myWatchlist', JSON.stringify(watchlist));
+        
+        alert(`${movie.Title} was added to your watchlist!`);
+    } else {
+        alert(`${movie.Title} is already on your watchlist.`);
+    }
+};
+
   return (
     <div className="movies__body">
       <div className="movies__main">
@@ -56,6 +75,7 @@ const MovieInfo = () => {
                 <p><b>Genre:</b> {movie.Genre}</p>
                 <p><b>Plot:</b> <i>{movie.Plot}</i></p>
                 <p><b>Runtime:</b> {movie.Runtime}</p>
+                <button className="movie__selected--button" onClick={handleAddToWatchlist}>Add to Watchlist</button>
               </div>
             </div>
             </>

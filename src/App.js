@@ -7,19 +7,23 @@ import Movies from './pages/Movies';
 import MovieInfo from './pages/MovieInfo';
 import Subscribe from './components/Subscribe/Subscribe';
 import Watchlist from './components/Watchlist/Watchlist';
+import Login from './components/Login/Login';
 
 function App() {
   return (
     <Router>
-      <div className="App">
+      <div className="App page-container">
         <Nav />
+        <main className="content__wrap">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/movies" element={<Movies />} />
           <Route path="/movie/:id" element={<MovieInfo />} />
           <Route path="/subscribe" element={<Subscribe />} />
           <Route path="/watchlist" element={<Watchlist />} />
+          <Route path="/login" element={<Login />} />
         </Routes>
+        </main>
         <Footer />
       </div>
     </Router>

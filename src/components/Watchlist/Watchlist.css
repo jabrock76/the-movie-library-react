@@ -1,15 +1,27 @@
 .watchlist__container a {
   align-self: flex-start;
-  margin: 24px auto;
+  margin: 0 auto;
+  width: 100%;
+  min-width: 1200px;
+  padding: 0 20px;
+}
+
+.watchlist__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   max-width: 1200px;
+  padding: 0 20px;
+  margin: 0 auto;
 }
 
 .watchlist__form {
   display: flex;
   flex-direction: column;
   width: 50%;
-  gap: 36px; 
+  gap: 12px; 
   margin-top: 16px;
 }
 
@@ -27,7 +39,7 @@
 
 .watchlist__header {
   font-size: 48px;
-  margin: 24px 0;
+  margin: 8px 0;
   color: fuchsia;
 }
 
@@ -43,31 +55,148 @@ input {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  height: 500px;
+  justify-content: flex-start;
+  min-height: 500px;
+  width: 100%;
 }
 
 .watchlist__button {
-  width: 50%;
+  width: 75%;
   align-self: center;
+  padding: 8px 8px;
   height: 48px;
   border-radius: 12px;
   background-color: royalblue;
   color: white;
   font-size: 24px;
   border: none;
-  margin: 24px 0;
+  cursor: pointer;
+}
+
+.watchlist__button:hover {
+  background-color: white;
+  color: royalblue;
+  border: 2px solid black;
+  text-decoration: underline fuchsia; 
+}
+
+.watchlist__list {
+  margin-top: 16px;
+}
+
+.movie__list--container {
+  font-size: 12px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 16px;
+  padding: 20px 0;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.movie__item {
+  background-color: #f9f9f9;
+  border: 1px solid black;
+  border-radius: 8px;
+  padding: 0 0 4px 0;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.movie__item--title {
+  margin-top: 0;
+  font-size: 1.3em;
+  flex-grow: 1;
+}
+
+.watchlist__remove--button {
+  width: 75%;
+  padding: 6px 6px;
+  border-radius: 8px;
+  background-color: rgb(255, 0, 255);
+  border: none;
+  color: white;
+  margin-top: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+
+}
+
+.watchlist__remove--button:hover {
+  background-color: white;
+  color: fuchsia;
+  border: 2px solid fuchsia;
+  text-decoration: underline fuchsia; 
+}
+
+.watchlist__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 20px;
+  font-size: 18px;
+  text-align: center;
+}
+
+/*TABLETS, LARGE SMARTPHONES */
+@media (max-width: 1100px) {
+.movie__list--container {
+  grid-template-columns: repeat(3, minmax(250px, 250px));
+  justify-content: center;
+  }
+.movie__item {
+  width: 250px;
+  max-width: 250px;
+}
+}
+
+/*SMALL TABLETS, LARGE SMARTPHONES */
+@media (max-width: 830px) {
+.movie__list--container {
+  grid-template-columns: repeat(2, minmax(250px, 250px));
+  justify-content: center;
+}
+
+.movie__item {
+  width: 250px;
+  max-width: 250px;
+}
+
+.watchlist__button {
+  font-size: 18px;
+}
+
+.watchlist__selected--top {
+  font-size: 18px;
+}
 }
 
 /*SMALL PHONES, TABLETS, LARGE SMARTPHONES */
-@media (max-width: 768px) {
+@media (max-width: 575px) {
 
 .watchlist__header {
   text-align: center;
-  font-size: 48px;
+  font-size: 36px;
 }
 
 input {
   width: 100%;
 }
+
+.movie__list--container {
+  grid-template-columns: 1fr;
+}
+
+.watchlist__button {
+  font-size: 18px
+}
+
 }

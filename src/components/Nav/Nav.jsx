@@ -2,11 +2,15 @@ import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import NavBackground from '../../assets/Movies Library.jpg';
 import LibraryLogo from '../../assets/The Movie Library Logo.jpg';
-import { Link, Links } from "react-router-dom";
+import { Link, Links, useNavigate } from "react-router-dom";
 import './Nav.css';
 
 const Nav = () => {
   const [ menuOpen, setMenuOpen ] = useState(false);
+  const navigate = useNavigate();
+
+  const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+  const currentUser = JSON.parse(localStorage.getItem('currentUser'));
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
@@ -14,6 +18,19 @@ const Nav = () => {
 
   const closeMenu = () => {
     setMenuOpen(false);
+  };
+
+  const handleLogout = () => {
+    const confirmLogout = window.confirm('Are you sure you want to logout?');
+
+    if (confirmLogout) {
+      localStorage.removeItem('isLoggedIn');
+      localStorage.removeItem('isSubscribed');
+      localStorage.removeItem('currentUser');
+      alert('You have been logged out successfully');
+      closeMenu();
+      navigate('/login');
+    }
   };
 
   return (
@@ -45,6 +62,13 @@ const Nav = () => {
           </li>
           <li className="nav__list">
             <Link to="/subscribe" className=" nav__link nav__link--primary" onClick={closeMenu}>Subscribe</Link>
+          </li>
+          <li className="nav__list">
+            {isLoggedIn ? (
+              <button className="nav__link nav__link--primary" onClick={handleLogout}>Logout ({currentUser?.name})</button>
+            ) : (
+              <Link to="/login" className="nav__link nav__link--primary" onClick={closeMenu}>Login</Link>
+            )}
           </li> 
         </ul>
         <button className="mobile__menu--btn" onClick={toggleMenu}>
