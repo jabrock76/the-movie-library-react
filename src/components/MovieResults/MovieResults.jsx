@@ -57,7 +57,10 @@ const MovieResults = ({ searchTerm, yearFilter }) => {
               filteredMovies.map((movie) => (
                 <div className="movie-card" key={movie.imdbID}>
                   <Link to={`/movie/${movie.imdbID}?${searchParams.toString()}`} className="movie-link">
-                    <img src={movie.Poster} alt="Movie Poster" />
+                    {movie.Poster && movie.Poster !== 'N/A'
+                    ? <img src={movie.Poster} alt="Movie Poster" />
+                    : <p>Poster not available</p>
+                    }
                     <h3>{movie.Title}</h3>
                     <p>Release Year: {movie.Year}</p>
                   </Link>
