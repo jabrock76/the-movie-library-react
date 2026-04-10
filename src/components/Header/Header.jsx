@@ -10,7 +10,7 @@ const Header = () => {
             <h2>A World of Entertainment at your <span className="royal"><u>Fingertips!</u></span></h2>
           </div>
           <div className="header__description">
-            <h3>Find the Movie you are looking for with <span className="fuchsia"><u>'The Movie Library'</u></span></h3>
+            <h3>Find the Movie or Show you are looking for with <span className="fuchsia"><u>'The Movie Library'</u></span></h3>
           </div>
         </div>
       </div>
