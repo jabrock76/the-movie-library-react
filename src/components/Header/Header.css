@@ -4,6 +4,7 @@ HEADER
 
 */
 
+
 .search__row {
     position: relative;
     z-index: 2;
@@ -37,7 +38,7 @@ HEADER
     text-align: center;
     margin-top: 12px;
     font-size: 32px; 
-    background-color:rgba(255, 255, 255, 0.95);
+    background-color: rgb(173, 204, 230);
     padding: 0 4px;
 }
 
@@ -52,7 +53,7 @@ HEADER
     justify-content: center;
     text-align: center;
     font-size: 24px;
-    background-color:rgba(255, 255, 255, 0.95);
+    background-color: rgb(173, 204, 230);
     padding: 0 4px;
 }
 

@@ -1,6 +1,6 @@
 /* 
 
-SEARCHED
+SEARCH
 
 */
 
@@ -9,7 +9,7 @@ SEARCHED
     align-items: center;
     justify-content: center;
     gap: 48px;
-    margin-top: 16px;
+    padding: 24px;
 }
 
 .input__wrapper input {

@@ -1,6 +1,6 @@
 /* 
 
-MoviesResults
+MOVIERESULTS
 
 */
 
@@ -15,7 +15,7 @@ MoviesResults
     gap: 8px;
     margin-top: 48px;
     padding: 12px;
-    min-height: 295px;
+    min-height: auto;
 }
 
 .movie-card {

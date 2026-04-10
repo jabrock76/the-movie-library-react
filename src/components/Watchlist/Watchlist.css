@@ -1,3 +1,9 @@
+/*
+
+WATCHLIST
+
+*/
+
 .watchlist__container a {
   align-self: flex-start;
   margin: 0 auto;
@@ -31,6 +37,8 @@
   align-items: center;
   text-align: none;
   gap: 8px;
+  margin-top: 24px;
+  max-width: 1200px;
 }
 
 .watchlist__selected--top {
@@ -39,7 +47,7 @@
 
 .watchlist__header {
   font-size: 48px;
-  margin: 8px 0;
+  margin-top: 24px;
   color: fuchsia;
 }
 
@@ -56,7 +64,7 @@ input {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  min-height: 500px;
+  height: 840px;
   width: 100%;
 }
 
