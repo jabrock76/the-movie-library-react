@@ -19,7 +19,7 @@ body {
     width: 100%;
     object-fit: cover;
     overflow-y: auto;
-    min-height: 70vh;
+    min-height: 75vh;
 }
 
 .footer__container {
@@ -39,7 +39,7 @@ nav {
     position: relative;
     width: 100%;
     overflow: hidden;
-    min-height: 300px;
+    min-height: 225px;
 }
 
 .nav__row,

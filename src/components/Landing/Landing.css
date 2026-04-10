@@ -7,6 +7,7 @@ LANDING
 .landing__img {
   height: 75%;
   width: 100%;
+  margin-top: 24px;
 }
 
 .results-grid {
