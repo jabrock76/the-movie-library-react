@@ -1,3 +1,12 @@
+#React project using IMBD API to search for Entertainment shows
+##Subscribe / Login / Logout settings for Page, stored only on Local Storage, with Login transitioning to Logout once Logged In
+###Watchlist page created to store shows of interest that the client wants to be able to reference within their account, up to 12 shows
+####Responsive for all page sizes.
+#####Animation of Clapperboard on the Home Page, which is dynamic with the Date!
+######Able to click on shows you search and get additional information on the selections.
+#######Able to refine your search by year, to minimize the range that they are supplying data for movies. 
+########Skeleton loading state
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
