@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import NavBackground from '../../assets/Movies Library.jpg';
 import LibraryLogo from '../../assets/The Movie Library Logo.jpg';
-import { Link, Links, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import './Nav.css';
 
 const Nav = () => {
