@@ -15,7 +15,7 @@ HEADER
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 24px;
+    padding: 24px 24px;
     flex: 1;
     gap: 16px;
 }
@@ -60,6 +60,7 @@ HEADER
 .header__description h3 {
     max-width: 100%;
     margin: 18px 0 0 0;
+    padding: 8px 0;
 }
 
 /*SMALL PHONES, TABLETS, LARGE SMARTPHONES */

@@ -7,7 +7,7 @@ FOOTER
 .footer__container {
     width: 100%;
     object-fit: cover;
-    height: 100px;
+    height: 150px;
 }
 
 .footer__row {

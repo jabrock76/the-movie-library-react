@@ -5,7 +5,7 @@ import './Landing.css';
 const Landing = () => {
   return (
     <>
-      <div className="container">
+      <div className="landing__container">
         <div className="row row__landing">
           <div id="movieResults" className="results-grid">
             <img
