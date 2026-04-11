@@ -7,15 +7,17 @@ LANDING
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 600px;
+    height: auto;
+    min-height: 400px;
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
 }
 .landing__img {
-    height: 100%;
+    height: auto;
     width: 100%;
-    margin-bottom: 24px;
+    max-height: 500px;
+    object-fit: cover;
 }
 
 .results-grid {
